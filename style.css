@@ -1,0 +1,52 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+header, footer {
+  padding: 10px;
+  background: #eef;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.panel {
+  width: 25%;
+  padding: 10px;
+  background: #f5f5f5;
+}
+#map {
+  height: 600px;
+  flex-grow: 1;
+}
+.indicator {
+  margin-top: 10px;
+  padding: 8px;
+  background: #ddd;
+}
+canvas {
+  margin-top: 10px;
+  width: 100% !important;
+}
+
+
+#bar-chart {
+  max-width: 600px;
+  height: 300px;
+  margin: auto;
+}
+
+
+.leaflet-tooltip {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  font-size: 13px;
+  font-family: sans-serif;
+  line-height: 1.4;
+  border: none;
+}

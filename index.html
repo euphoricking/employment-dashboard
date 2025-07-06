@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employment Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+<header>
+  <h1>Employment Dashboard: Austria and Neighboring Countries (2000–2023)</h1>
+  <p>
+    This dashboard allows you to explore employment trends in Austria and its neighboring countries (Germany, Italy, Switzerland, Hungary, Czechia, Slovakia, Slovenia).
+    Select a year and comparison country to view employment indicators side by side.
+  </p>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li><strong>Left Panel:</strong> Select a year for Austria and view Male, Female, and Total employment rates with trends.</li>
+    <li><strong>Right Panel:</strong> Select a comparison country and year. Indicators update accordingly.</li>
+    <li><strong>Map:</strong> Hover over any country to see employment rates for the selected year.</li>
+    <li><strong>Charts:</strong> Line charts show trends; bar charts compare Austria and the selected country.</li>
+  </ul>
+</header>
+
+
+  <div class="container">
+    <div class="panel">
+      <h3>Austria</h3>
+      <label for="austria-year">Select Year:</label>
+      <select id="austria-year"></select>
+      <div class="indicator"><strong>Male:</strong> <span id="austria-male">-</span></div>
+      <div class="indicator"><strong>Female:</strong> <span id="austria-female">-</span></div>
+      <div class="indicator"><strong>Total:</strong> <span id="austria-total">-</span></div>
+      <canvas id="austria-line"></canvas>
+    </div>
+
+    <div id="map" style="height: 600px;"></div>
+
+    <div class="panel">
+      <h3>Comparison Country</h3>
+      <label for="compare-country">Select Country:</label>
+      <select id="compare-country"></select>
+      <label for="compare-year">Select Year:</label>
+      <select id="compare-year"></select>
+      <div class="indicator"><strong>Male:</strong> <span id="compare-male">-</span></div>
+      <div class="indicator"><strong>Female:</strong> <span id="compare-female">-</span></div>
+      <div class="indicator"><strong>Total:</strong> <span id="compare-total">-</span></div>
+      <canvas id="compare-line"></canvas>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="panel" style="width: 100%">
+      <canvas id="bar-chart"></canvas>
+    </div>
+  </div>
+
+<footer>
+  <p>
+    <strong>Data Source:</strong> Eurostat – Employment statistics by country, gender, and year.<br>
+    <strong>GeoJSON Source:</strong> Simplified country boundaries from <a href="https://geojson-maps.ash.ms" target="_blank">geojson-maps.ash.ms</a>.<br>
+    <strong>Built With:</strong> Leaflet.js, Chart.js, HTML5, and GeoJSON. <br>
+    <strong>Developer:</strong> Ekata Leo Oni, Ce Li [SDI project] | <strong>Year:</strong> 2025
+  </p>
+  <p>
+    To learn more about the data and it's structure, refer to the metadata documentation provided with the dashboard.
+  </p>
+</footer>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
